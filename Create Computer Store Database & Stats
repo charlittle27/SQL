@@ -1,4 +1,7 @@
+--Create a database for my fictional computer store
+
 CREATE TABLE computers(id INTEGER PRIMARY KEY, name TEXT, quantity_sold INTEGER, price INTEGER, product_rating INTEGER);
+
 INSERT INTO computers VALUES(1,"macbook_pro2020",17,1200,4);
 INSERT INTO computers VALUES(2,"macbook_air2020",12,900,3);
 INSERT INTO computers VALUES(3,"asus_aspire",8,800,3);
