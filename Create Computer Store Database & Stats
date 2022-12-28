@@ -1,0 +1,29 @@
+CREATE TABLE computers(id INTEGER PRIMARY KEY, name TEXT, quantity_sold INTEGER, price INTEGER, product_rating INTEGER);
+INSERT INTO computers VALUES(1,"macbook_pro2020",17,1200,4);
+INSERT INTO computers VALUES(2,"macbook_air2020",12,900,3);
+INSERT INTO computers VALUES(3,"asus_aspire",8,800,3);
+INSERT INTO computers VALUES(4,"alienware",4,1500,5);
+INSERT INTO computers VALUES(5,"hp",20,700,4);
+INSERT INTO computers VALUES(6,"macbook_pro2019",25,1100,4);
+INSERT INTO computers VALUES(7,"macbook_air2019",20,850,4);
+INSERT INTO computers VALUES(8,"hp_pc",5,600,4);
+INSERT INTO computers VALUES(9,"surface_go",10,1300,5);
+INSERT INTO computers VALUES(10,"acer_predator",15,900,4);
+INSERT INTO computers VALUES(11,"microsoft_surface",4,1500,5);
+INSERT INTO computers VALUES(12,"dell_xps",20,800,2);
+INSERT INTO computers VALUES(13,"asus_chromebook",30,500,3);
+INSERT INTO computers VALUES(14,"azulle",3,170,3);
+INSERT INTO computers VALUES(15,"msi_meg",7,2400,5);
+
+--Display the database ordered by price lowest to highest
+SELECT * FROM computers 
+ORDER BY price asc;
+
+--Sort by product rating
+SELECT * FROM computers
+ORDER BY product_rating desc;
+
+--where price is greater than 1000, by product rating
+SELECT name, price, product_rating FROM computers
+WHERE price >1000
+ORDER BY product_rating desc;
